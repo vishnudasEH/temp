@@ -1,0 +1,17 @@
+play.modules.enabled += org.thp.thehive.connector.misp.MispModule
+misp {
+  interval: 1 hour
+  servers: [
+    {
+      name = "MISP"            
+      url = "http://192.168.1.144/" 
+      auth {
+        type = key
+        key = "4DRdlVpin6CCtntR8FPcJ0AaXTcQpwFWppustXbk"
+      }
+      tags = ["tag1", "tag2","tag3"]
+      caseTemplate = "misp"  
+      includedTheHiveOrganisations = ["naruto"]
+    }
+  ]
+} 
